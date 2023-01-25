@@ -9,7 +9,6 @@
 	--smallRadius: 3px;
 	--averageRadius: 5px;
 	--comment: rgb(96, 216, 96);
-	--commentTitle: rgb(96, 216, 96);
 }
 
 body
@@ -19,7 +18,7 @@ body
 	background: var(--backgroundColor);
 	color: var(--maincolor);
 	font-family: Calibri;
-	font-size: larger;
+	font-size: large;
 }
 
 /* == global rules */
@@ -39,9 +38,9 @@ div.pageContainer
 div.header
 {
 	grid-area: header;
+	text-align: center;
 }
-h1.header { margin: auto; }
-hr.header { margin: 0; }
+div.header > img { margin: 10px 0 0 0; }
 /* Body*/
 div.body
 {
@@ -49,18 +48,37 @@ div.body
 }
 div.mainContainer
 {
-	display: grid;
-	grid-template-areas: "a b";
-	grid-template-columns: 50%;
-	gap: 24px;
-	width: 250mm;
+	width: 945px;
 	max-width: 290mm;
-	margin: auto;
-	text-align: justify;
+	margin: 0 auto 1rem;
 	padding: 25px 55px;
 	outline: var(--border) solid 1px;
 	border-radius: var(--smallRadius);
 	box-shadow: var(--border) 5px 5px 0;
+}
+div.banner
+{
+	text-align: center;
+}
+div.banner > img
+{
+	position: relative;
+	bottom: 25px;
+	right: 55px;
+	border-radius: var(--smallRadius) var(--smallRadius) 0 0;
+}
+div.banner > h1
+{
+	margin-top: 0;
+}
+div.textGrid
+{
+	display: grid;
+	grid-template-areas: "a b";
+	grid-template-columns: 50%;
+	gap: 24px;
+	text-align: justify;
+	width: 100%;
 }
 .commentBloc { color: var(--comment); font-family: Consolas; }
 div.couleur
@@ -72,4 +90,6 @@ div.couleur
 div.footer
 {
 	grid-area: footer;
+	font-size: 0.8em;
+	text-align: center;
 }
