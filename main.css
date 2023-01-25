@@ -1,0 +1,75 @@
+/* == base */
+:root
+{
+	--maincolor: #ffffff;
+	--subColor: lightblue;
+	--backgroundColor: #0e0e0f;
+	--anotherColor:  pink;
+	--border: grey;
+	--smallRadius: 3px;
+	--averageRadius: 5px;
+	--comment: rgb(96, 216, 96);
+	--commentTitle: rgb(96, 216, 96);
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	background: var(--backgroundColor);
+	color: var(--maincolor);
+	font-family: Calibri;
+	font-size: larger;
+}
+
+/* == global rules */
+hr { width: 100%; margin: 2px 0; }
+/* == layout */
+div.pageContainer
+{
+	display: grid;
+	grid-template-areas:
+	"header"
+	"body"
+	"footer";
+	grid-template-rows: 4rem auto 2rem;
+	height: 100vh;
+}
+/* Header*/
+div.header
+{
+	grid-area: header;
+}
+h1.header { margin: auto; }
+hr.header { margin: 0; }
+/* Body*/
+div.body
+{
+	grid-area: body;
+}
+div.mainContainer
+{
+	display: grid;
+	grid-template-areas: "a b";
+	grid-template-columns: 50%;
+	gap: 24px;
+	width: 250mm;
+	max-width: 290mm;
+	margin: auto;
+	text-align: justify;
+	padding: 25px 55px;
+	outline: var(--border) solid 1px;
+	border-radius: var(--smallRadius);
+	box-shadow: var(--border) 5px 5px 0;
+}
+.commentBloc { color: var(--comment); font-family: Consolas; }
+div.couleur
+{
+	background: var(--anotherColor);
+	border-radius: var(--averageRadius);
+}
+/* Footer*/
+div.footer
+{
+	grid-area: footer;
+}
