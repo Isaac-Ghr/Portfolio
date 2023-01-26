@@ -3,9 +3,9 @@
 {
 	/* Couleurs */
 	--maincolor: #ffffff;
-	--subColor: lightgreen;
+	--subColor: rgb(243, 196, 96);
 	--backgroundColor: #0e0e0f;
-	--border: grey;
+	--border: rgb(92, 92, 92);
 	--comment: rgb(96, 216, 96);
 	/* Mesures */
 	--smallRadius: 3px;
@@ -52,7 +52,6 @@ div.body
 div.mainContainer
 {
 	width: 945px;
-	max-width: 290mm;
 	margin: 0 auto 1rem;
 	padding: 25px 55px;
 	outline: var(--border) solid 1px;
@@ -70,9 +69,18 @@ div.banner > img
 	right: 55px;
 	border-radius: var(--smallRadius) var(--smallRadius) 0 0;
 }
-div.banner > h1
+div.banner > div.title
 {
-	margin-top: 0;
+	position: relative;
+	bottom: 100px; background: var(--backgroundColor);
+	width: fit-content;
+	border-radius: 25px 25px 0 0;
+	margin: 0 auto;
+	padding: 5px 25px;
+}
+h1.title, h2.title
+{
+	margin: 0.4em;
 }
 div.textGrid
 {
@@ -81,7 +89,6 @@ div.textGrid
 	grid-template-columns: 50%;
 	gap: 24px;
 	text-align: justify;
-	width: 100%;
 }
 .commentBloc { color: var(--comment); font-family: Consolas; }
 div.couleur
