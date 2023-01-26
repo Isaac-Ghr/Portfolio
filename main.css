@@ -1,14 +1,16 @@
 /* == base */
 :root
 {
+	/* Couleurs */
 	--maincolor: #ffffff;
-	--subColor: lightblue;
+	--subColor: lightgreen;
 	--backgroundColor: #0e0e0f;
-	--anotherColor:  pink;
 	--border: grey;
+	--comment: rgb(96, 216, 96);
+	/* Mesures */
 	--smallRadius: 3px;
 	--averageRadius: 5px;
-	--comment: rgb(96, 216, 96);
+	
 }
 
 body
@@ -23,6 +25,7 @@ body
 
 /* == global rules */
 hr { width: 100%; margin: 2px 0; }
+h2, h3 { color: var(--subColor); }
 /* == layout */
 div.pageContainer
 {
@@ -83,7 +86,7 @@ div.textGrid
 .commentBloc { color: var(--comment); font-family: Consolas; }
 div.couleur
 {
-	background: var(--anotherColor);
+	background: var(--border);
 	border-radius: var(--averageRadius);
 }
 /* Footer*/
