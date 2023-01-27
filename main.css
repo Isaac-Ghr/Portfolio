@@ -81,6 +81,8 @@ div.banner > div.title
 h1.title, h2.title
 {
 	margin: 0.4em;
+	font-size: 2.5em;
+	line-height: 0.8;
 }
 div.textGrid
 {
