@@ -56,7 +56,7 @@ div.mainContainer
 	padding: 25px 55px;
 	outline: var(--border) solid 1px;
 	border-radius: var(--smallRadius);
-	box-shadow: var(--border) 5px 5px 0;
+	box-shadow: var(--border) 7px 7px 0;
 }
 div.banner
 {
