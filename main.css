@@ -2,9 +2,12 @@
 :root
 {
 	/* Couleurs */
-	--maincolor: #ffffff;
-	--subColor: rgb(243, 196, 96);
-	--backgroundColor: #0e0e0f;
+	--maincolor: #f5f5f5;
+	--yellow: #ffb638;
+	--green: #56dd56;
+	--red: #ff5638;
+	--blue: #5638ff;
+	--backgroundColor: #222226;
 	--border: rgb(92, 92, 92);
 	--comment: rgb(96, 216, 96);
 	/* Mesures */
@@ -18,14 +21,16 @@ body
 	margin: 0;
 	padding: 0;
 	background: var(--backgroundColor);
-	color: var(--maincolor);
 	font-family: Calibri;
 	font-size: large;
 }
 
 /* == global rules */
 hr { width: 100%; margin: 2px 0; }
-h2, h3 { color: var(--subColor); }
+h1 { text-align: center; }
+h2 { color:#ff5638; }
+/* h2, h3 { color: var(--subColor); } */
+img { image-rendering: pixelated; }
 /* == layout */
 div.pageContainer
 {
@@ -51,12 +56,14 @@ div.body
 }
 div.mainContainer
 {
-	width: 945px;
+	width: 944px;
 	margin: 0 auto 1rem;
 	padding: 25px 55px;
-	outline: var(--border) solid 1px;
+	color: var(--backgroundColor);
+	background: var(--maincolor);
 	border-radius: var(--smallRadius);
-	box-shadow: var(--border) 7px 7px 0;
+	/* outline: var(--border) solid 1px;
+	box-shadow: var(--border) 7px 7px 0; */
 }
 div.banner
 {
@@ -72,15 +79,17 @@ div.banner > img
 div.banner > div.title
 {
 	position: relative;
-	bottom: 100px; background: var(--backgroundColor);
+	bottom: 100px;
+	background: var(--maincolor);
+	color: inherit;
 	width: fit-content;
-	border-radius: 25px 25px 0 0;
+	border-radius: var(--averageRadius) var(--averageRadius) 0 0;
 	margin: 0 auto;
 	padding: 5px 25px;
 }
-h1.title, h2.title
+h1.title
 {
-	margin: 0.4em;
+	margin: 0.2em;
 	font-size: 2.5em;
 	line-height: 0.8;
 }
@@ -92,12 +101,21 @@ div.textGrid
 	gap: 24px;
 	text-align: justify;
 }
+div.largeMember
+{
+	grid-area : "a b";
+}
 .commentBloc { color: var(--comment); font-family: Consolas; }
 div.couleur
 {
 	background: var(--border);
 	border-radius: var(--averageRadius);
 }
+.WIP
+{
+	color: var(--border);
+}
+
 /* Footer*/
 div.footer
 {
