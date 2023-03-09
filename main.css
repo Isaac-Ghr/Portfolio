@@ -53,6 +53,7 @@ div.header > img { margin: 10px 0 0 0; }
 div.body
 {
 	grid-area: body;
+	text-align: center;
 }
 div.mainContainer
 {
@@ -93,12 +94,20 @@ h1.title
 	font-size: 2.5em;
 	line-height: 0.8;
 }
-div.textGrid
+div.profil
 {
-	display: grid;
-	grid-template-areas: "a b";
-	grid-template-columns: 50%;
-	gap: 24px;
+	text-align : center;
+	margin-bottom : 2em;
+}
+div.profil { flex-shrink: 1; margin: auto 0; }
+img.profil { border-radius: 50%; width: 132px; height: 132px;}
+span.profile { font-weight: 600; font-size: larger; color: var(--border); }
+div.text { width: calc(944px / 2 - 132px / 2); }
+div.profilGrid
+{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
 	text-align: justify;
 }
 div.largeMember
